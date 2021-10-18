@@ -1,3 +1,6 @@
-.service-list li{
+.service-list li, .important-list li{
     list-style-type: none;
+}
+.service-list li:nth-child(1), .important-list li:nth-child(1){
+    font-weight: bold;
 }
