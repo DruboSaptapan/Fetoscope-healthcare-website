@@ -27,7 +27,7 @@ const Header = () => {
                                 </Link>
                             </li>
                             <li className="nav-item">
-                                <Link className="nav-link" to="">
+                                <Link className="nav-link" to="/register">
                                     <button type="button" className="btn btn-outline-primary rounded-pill">Register</button>
                                 </Link>
                             </li>
