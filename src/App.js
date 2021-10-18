@@ -8,6 +8,7 @@ import Home from './Components/Home/Home';
 import Login from './Components/Login/Login';
 import NotFound from './Components/NotFound/NotFound';
 import Register from './Components/Register/Register'
+import Services from './Components/Services/Services';
 
 function App() {
   return (
@@ -21,6 +22,10 @@ function App() {
 
           <Route path="/home">
             <Home></Home>
+          </Route>
+
+          <Route path="/services">
+            <Services></Services>
           </Route>
 
           <Route path="/aboutus"></Route>
