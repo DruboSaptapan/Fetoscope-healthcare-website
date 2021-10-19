@@ -5,8 +5,10 @@ import img from './images/doctor.jpg'
 import { FcGoogle } from "react-icons/fc";
 import { VscGithubAlt } from "react-icons/vsc";
 import { Link } from 'react-router-dom';
+import useFirebase from '../../Hooks/useFirebase';
 
 const Login = () => {
+    const {signInUsingGoogle} = useFirebase();
     return (
         <div className="container">
             <div className="row m-5 no-gutters shadow-lg">
@@ -31,7 +33,7 @@ const Login = () => {
                             </div>
                             
                             <div className="pb-2">
-                                <button className="btn border w-100 fw-normal mt-2"><FcGoogle /> Log in with Google</button>
+                                <button className="btn border w-100 fw-normal mt-2" onClick={signInUsingGoogle}><FcGoogle /> Log in with Google</button>
                             </div>
                             <div className="sideline">OR</div>
                             <div>
@@ -39,7 +41,7 @@ const Login = () => {
                             </div>
                         </form>
                         <div className="pt-4 text-center">
-                            New to Fetoskope? <Link to="/register" style={{ textDecoration: 'none' }}>Register</Link>
+                            New to Fetoscope? <Link to="/register" style={{ textDecoration: 'none' }}>Register</Link>
                         </div>
                     </div>
                 </div>

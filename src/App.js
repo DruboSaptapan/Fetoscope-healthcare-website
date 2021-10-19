@@ -7,7 +7,9 @@ import Header from './Components/Header/Header';
 import Home from './Components/Home/Home';
 import Login from './Components/Login/Login';
 import NotFound from './Components/NotFound/NotFound';
+import Price from './Components/Price/Price';
 import Register from './Components/Register/Register'
+import SeeMore from './Components/SeeMore/SeeMore';
 import Services from './Components/Services/Services';
 
 function App() {
@@ -24,8 +26,16 @@ function App() {
             <Home></Home>
           </Route>
 
-          <Route path="/services">
+          <Route path="/service">
             <Services></Services>
+          </Route>
+
+          <Route path="/seemore/:serviceId">
+            <SeeMore></SeeMore>
+          </Route>
+
+          <Route path="/pricing">
+            <Price></Price>
           </Route>
 
           <Route path="/aboutus"></Route>

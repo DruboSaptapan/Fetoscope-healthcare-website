@@ -12,7 +12,7 @@ const Footer = () => {
                 <div className="col">
                 <Link className="navbar-brand" to="/">
                         <img src={logo} alt="" style={{ width: 40, fontWeight: 700, color: 'black', marginRight: 5 }}/> 
-                        Fetoskope
+                        Fetoscope
                     </Link>
                 </div>
                 <div className="col-lg-3">
