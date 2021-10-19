@@ -11,7 +11,7 @@ const Login = () => {
     const { signInUsingGoogle } = useAuth();
     return (
         <div className="container">
-            <div className="row m-5 no-gutters shadow-lg">
+            <div className="row mx-3 my-5 no-gutters shadow-lg">
                 <div className="col-md-6 d-none d-md-block">
                     <img src={img} alt="" />
                 </div>
