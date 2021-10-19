@@ -5,9 +5,7 @@ import './SeeMore.css'
 
 const SeeMore = () => {
     const { serviceId } = useParams();
-
     const [serviceInfo, setServiceInfo] = useState([])
-
     const [singleServiceInfo, setSingleServiceInfo] = useState({})
 
     useEffect(() => {

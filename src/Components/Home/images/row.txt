@@ -1,53 +1,31 @@
-import { getAuth, signInWithPopup, GoogleAuthProvider, onAuthStateChanged, signOut } from "firebase/auth";
-import { useEffect, useState } from "react";
-import initializeAuthentication from '../Firebase/firebase.init';
+import React from 'react';
+import { Spinner } from 'react-bootstrap';
+import { Redirect, Route } from 'react-router';
+import useAuth from '../../Hooks/useAuth';
 
-initializeAuthentication();
 
-const useFirebase = () => {
-    const [user, setUser] = useState({});
-    const [error, setError] = useState('');
-
-    const auth = getAuth();
-    const googleProvider = new GoogleAuthProvider();
-
-    const signInWithGoogle = () => {
-        signInWithPopup(auth, googleProvider)
-            .then(result => {
-                console.log(result.user);
-                setUser(result.user);
-            })
-            .catch(error => {
-                setError(error.message);
-            });
-    };
-
-    const logOut = () => {
-        signOut(auth).then(() => {
-            setUser({});
-        });
-    };
-
-    // observe user state change
-    useEffect(() => {
-        const unsubscribed = onAuthStateChanged(auth, user => {
-            if (user) {
-                console.log('inside state change', user);
-                setUser(user);
-            }
-            else {
-                setUser({})
-            }
-        });
-        return () => unsubscribed;
-    }, []);
-
-    return {
-        user,
-        error,
-        logOut,
-        signInWithGoogle
+const PrivateRoute = ({ children, ...rest }) => {
+    const { user, isLoading} = useAuth();
+    if (isLoading) {
+        return (
+            <div className="spinner-grow text-success" role="status">
+                <span className="visually-hidden">Loading...</span>
+            </div>
+        )
     }
+    return (
+        <Route
+            {...rest}
+            render={({ location }) => user.displayName ? children : <Redirect
+                to={{
+                    pathname: "/sign-in",
+                    state: { from: location }
+                }}
+            ></Redirect>
+            }
+        >
+        </Route>
+    );
 };
 
-export default useFirebase;
+export default PrivateRoute;

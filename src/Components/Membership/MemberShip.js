@@ -5,7 +5,7 @@ import './Membership.css'
 const MemberShip = () => {
     return (
         <div className="container" id="pricing">
-            <h2 className="mt-5 mb-3">Price & planning</h2>
+            <h2 className="mt-5 mb-3">Membership</h2>
             <div className="row row-cols-1 row-cols-md-3 g-4">
                 <div className="col">
                     <div className="card h-100">

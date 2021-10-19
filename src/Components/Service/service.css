@@ -1,3 +1,12 @@
 .service-btn{
     background-color: cornflowerblue;
 }
+
+.service-btn{
+    font-weight: 700;
+    background-color: lightsteelblue;
+}
+.service-btn:hover{
+    color: #fff;
+    background-color: rgb(72, 126, 196);
+}

@@ -1,5 +1,6 @@
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import './App.css';
+import AboutUs from './Components/AboutUs/AboutUs';
 
 import Contact from './Components/Contact/Contact'
 import Footer from './Components/Footer/Footer';
@@ -40,7 +41,9 @@ function App() {
               <MemberShip></MemberShip>
             </Route>
 
-            <Route path="/aboutus"></Route>
+            <Route path="/aboutus">
+              <AboutUs></AboutUs>
+            </Route>
 
             <Route path="/contactus">
               <Contact></Contact>
