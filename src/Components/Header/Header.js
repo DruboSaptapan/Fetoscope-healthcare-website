@@ -33,22 +33,27 @@ const Header = () => {
                             <li className="nav-item">
                                 <NavLink className="nav-link" to="/contactus">Contact Us</NavLink>
                             </li>
-                            <li>{user?.displayName}</li>
                         </ul>
                         <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
                             <li className="nav-item">
+                                {
+                                    user.photoUrl && <img src={user.photoUrl} alt="" />
+                                }
+                                {
+                                    user.displayName && <p className="px-3 py-2 mt-2 border rounded-pill">{user.displayName}</p>
+                                }
+                            </li>
+
+                            <li className="nav-item">
                                 <NavLink className="nav-link active" aria-current="page" to="/login">
-                                    {
-                                        user?.email?
-                                        <button className="btn btn-danger" onClick={logOut}>Log Out</button>
-                                        :<button type="button" className="btn btn-primary">Log in</button>
+                                    {/* condition ? exprIfTrue : exprIfFalse */}
+                                    {user.displayName ?
+                                        <button onClick={logOut} className="btn btn-primary ms-2">Sign Out</button> :
+                                        <NavLink to="/login"><button className="btn btn-outline-primary me-1" type="submit" >Log In</button></NavLink>
                                     }
                                 </NavLink>
-                            </li>
-                            <li className="nav-item">
-                                <NavLink className="nav-link" to="/register">
-                                    <button type="button" className="btn btn-outline-primary">Register</button>
-                                </NavLink>
+
+
                             </li>
                         </ul>
                     </div>

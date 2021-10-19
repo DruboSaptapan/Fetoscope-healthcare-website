@@ -1,7 +1,8 @@
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import './App.css';
-import AboutUs from './Components/AboutUs/AboutUs';
 
+import AboutUs from './Components/AboutUs/AboutUs';
+import AuthProvider from './Context/AuthProvider';
 import Contact from './Components/Contact/Contact'
 import Footer from './Components/Footer/Footer';
 import Header from './Components/Header/Header';
@@ -12,7 +13,7 @@ import NotFound from './Components/NotFound/NotFound';
 import Register from './Components/Register/Register'
 import SeeMore from './Components/SeeMore/SeeMore';
 import Services from './Components/Services/Services';
-import AuthProvider from './Context/AuthProvider';
+import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
 
 function App() {
   return (
@@ -33,9 +34,9 @@ function App() {
               <Services></Services>
             </Route>
 
-            <Route path="/seemore/:serviceId">
+            <PrivateRoute path="/seemore/:serviceId">
               <SeeMore></SeeMore>
-            </Route>
+            </PrivateRoute>
 
             <Route path="/membership">
               <MemberShip></MemberShip>
