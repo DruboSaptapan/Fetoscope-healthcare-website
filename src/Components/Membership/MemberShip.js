@@ -1,8 +1,8 @@
 import React from 'react';
 
-import './Price.css'
+import './Membership.css'
 
-const Price = () => {
+const MemberShip = () => {
     return (
         <div className="container" id="pricing">
             <h2 className="mt-5 mb-3">Price & planning</h2>
@@ -16,19 +16,19 @@ const Price = () => {
                             <ul className="list-group my-3">
                                 <li className="list-group-item border-0 d-flex justify-content-around align-items-start">
                                     <div className="ms-3 me-auto">Routine Checkup</div>
-                                    <span className="badge text-dark me-3">✔</span>
+                                    <span className="badge text-dark ">✔</span>
                                 </li>
                                 <li className="list-group-item border-0 d-flex justify-content-around align-items-start">
                                     <div className="ms-3 me-auto">24Th Assistance</div>
-                                    <span className="badge text-dark me-3">✔</span>
+                                    <span className="badge text-dark ">✔</span>
                                 </li>
                                 <li className="list-group-item border-0 d-flex justify-content-around align-items-start">
                                     <div className="ms-3 me-auto">100 tests & treatments</div>
-                                    <span className="badge text-dark me-3">✔</span>
+                                    <span className="badge text-dark ">✔</span>
                                 </li>
                                 <li className="list-group-item border-0 d-flex justify-content-around align-items-start">
                                     <div className="ms-3 me-auto">Regular health checkups</div>
-                                    <span className="badge text-dark me-3">✔</span>
+                                    <span className="badge text-dark ">✔</span>
                                 </li>
                             </ul>
                             <button className="btn price-btn">Make payment</button>
@@ -44,19 +44,19 @@ const Price = () => {
                             <ul className="list-group my-3">
                                 <li className="list-group-item border-0 d-flex justify-content-around align-items-start">
                                     <div className="ms-3 me-auto">Routine Checkup</div>
-                                    <span className="badge text-dark me-3">✔</span>
+                                    <span className="badge text-dark ">✔</span>
                                 </li>
                                 <li className="list-group-item border-0 d-flex justify-content-around align-items-start">
                                     <div className="ms-3 me-auto">24Th Assistance</div>
-                                    <span className="badge text-dark me-3">✔</span>
+                                    <span className="badge text-dark ">✔</span>
                                 </li>
                                 <li className="list-group-item border-0 d-flex justify-content-around align-items-start">
                                     <div className="ms-3 me-auto">100 tests & treatments</div>
-                                    <span className="badge text-dark me-3">✔</span>
+                                    <span className="badge text-dark ">✔</span>
                                 </li>
                                 <li className="list-group-item border-0 d-flex justify-content-around align-items-start">
                                     <div className="ms-3 me-auto">Regular health checkups</div>
-                                    <span className="badge text-dark me-3">✔</span>
+                                    <span className="badge text-dark ">✔</span>
                                 </li>
                             </ul>
                             <button className="btn price-btn">Make payment</button>
@@ -72,19 +72,19 @@ const Price = () => {
                             <ul className="list-group my-3">
                                 <li className="list-group-item border-0 d-flex justify-content-around align-items-start">
                                     <div className="ms-3 me-auto">Routine Checkup</div>
-                                    <span className="badge text-dark me-3">✔</span>
+                                    <span className="badge text-dark ">✔</span>
                                 </li>
                                 <li className="list-group-item border-0 d-flex justify-content-around align-items-start">
                                     <div className="ms-3 me-auto">24Th Assistance</div>
-                                    <span className="badge text-dark me-3">✔</span>
+                                    <span className="badge text-dark ">✔</span>
                                 </li>
                                 <li className="list-group-item border-0 d-flex justify-content-around align-items-start">
                                     <div className="ms-3 me-auto">100 tests & treatments</div>
-                                    <span className="badge text-dark me-3">✔</span>
+                                    <span className="badge text-dark ">✔</span>
                                 </li>
                                 <li className="list-group-item border-0 d-flex justify-content-around align-items-start">
                                     <div className="ms-3 me-auto">Regular health checkups</div>
-                                    <span className="badge text-dark me-3">✔</span>
+                                    <span className="badge text-dark ">✔</span>
                                 </li>
                             </ul>
                             <button className="btn price-btn">Make payment</button>
@@ -96,4 +96,4 @@ const Price = () => {
     );
 };
 
-export default Price;
+export default MemberShip;

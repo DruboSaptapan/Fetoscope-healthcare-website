@@ -1,10 +1,10 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import useFirebase from '../../Hooks/useFirebase';
+import useAuth from '../../Hooks/useAuth';
 import logo from './images/fetoskope.png'
 
 const Header = () => {
-    const { user, logOut } = useFirebase();
+    const { user, logOut } = useAuth();
     return (
         <div>
             <nav className="navbar navbar-expand-lg navbar-light bg-light">
@@ -25,7 +25,7 @@ const Header = () => {
                                 <NavLink className="nav-link" to="/service">Services</NavLink>
                             </li>
                             <li className="nav-item">
-                                <NavLink className="nav-link" to="/pricing">Pricing</NavLink>
+                                <NavLink className="nav-link" to="/membership">Membership</NavLink>
                             </li>
                             <li className="nav-item">
                                 <NavLink className="nav-link" to="/aboutus">About Us</NavLink>
@@ -33,12 +33,13 @@ const Header = () => {
                             <li className="nav-item">
                                 <NavLink className="nav-link" to="/contactus">Contact Us</NavLink>
                             </li>
+                            <li>{user?.displayName}</li>
                         </ul>
                         <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
                             <li className="nav-item">
                                 <NavLink className="nav-link active" aria-current="page" to="/login">
                                     {
-                                        user.email?
+                                        user?.email?
                                         <button className="btn btn-danger" onClick={logOut}>Log Out</button>
                                         :<button type="button" className="btn btn-primary">Log in</button>
                                     }

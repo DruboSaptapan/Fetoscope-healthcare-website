@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@600&display=swap');
+.price{
+    color: lightskyblue;
+    font-family: 'Lora', serif;
+    font-size: 5em;
+}
+.card{
+    width: 95%;
+}
+.price-btn{
+    font-weight: 700;
+    background-color: lightsteelblue;
+}
+.price-btn:hover{
+    color: #fff;
+    background-color: rgb(72, 126, 196);
+}
