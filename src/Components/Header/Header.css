@@ -1,6 +1,6 @@
 .user-box{
     width: fit-content;
-    background-color: rgb(199, 230, 250);
+    background-color: rgba(199, 230, 250, 0.329);
 }
 .user{
     width: 35px;
