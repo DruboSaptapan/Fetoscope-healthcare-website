@@ -23,7 +23,7 @@ function App() {
         <Router>
           <Header></Header>
           <Switch>
-            <Route exact exact path="/">
+            <Route exact path="/">
               <Home></Home>
             </Route>
 

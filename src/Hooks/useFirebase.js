@@ -21,15 +21,20 @@ const useFirebase = () => {
             .then(result => {
                 setUser(result.user);
             })
+            .catch(error => {
+                setError(error.message)
+            })
             .finally(() => setIsLoading(false));
     };
 
-    /* github signing in */
     const signInUsingGithub = () => {
         setIsLoading(true);
         signInWithPopup(auth, githubProvider)
             .then(result => {
                 setUser(result.user);
+            })
+            .catch(error => {
+                setError(error.message)
             })
             .finally(() => setIsLoading(false));
     }
@@ -37,40 +42,52 @@ const useFirebase = () => {
     const handleEmailChange = e => {
         setEmail(e.target.value);
     }
-
     const handlePasswordChange = e => {
         setPassword(e.target.value)
     }
-    
     const handleRegistration = e => {
         e.preventDefault();
         if (password.length < 6) {
             setError('Password At Least 6 Character')
             return;
         }
-        if (!/(?=.*[A-Z].*[A-Z])/.test(password)) {
-        // if ((/^[a-zA-Z0-9!@#$%^&*]{6,16}$/).test(passwordInputValue) {
+        else if (!/(?=.*[A-Z].*[A-Z])/.test(password)) {
             setError('Password Must contain 2 upper case');
             return;
         }
+        else if (error.message == '(auth/email-already-in-use)') {
+            alert("Oops! email already in use.");
+        }
+
+        else {
+            alert("User has been Created. Please Sign in!");
+        }
+
         createUserWithEmailAndPassword(auth, email, password)
             .then(result => {
-                const user = result.user;
+                setUser(result.user);
+                setError('');
             })
             .catch(error => {
                 setError(error.message)
             });
     }
 
-    const handleSignIn = (email, password) => {
+    const handleSignIn = (e) => {
+        e.preventDefault();
+
+        // if ((password.length <= 6) && (/(?=.*[A-Z].*[A-Z])/.test(password))) {
+        //     alert("Sign In Successfully.");
+        // }
+
         signInWithEmailAndPassword(auth, email, password)
             .then(result => {
-                const user = result.user;
-                console.log(user);
+                setUser(result.user);
+                setError('');
             })
             .catch(error => {
                 setError(error.message);
-            })
+            });
     }
 
     const logOut = () => {
@@ -80,7 +97,9 @@ const useFirebase = () => {
             .finally(() => setIsLoading(false));
     };
 
-    // it observes that user changes state when user sign in, sign out
+    // observation to user state change when signIn or signOut
+    // it observes that 
+
     useEffect(() => {
         const unsubscribed = onAuthStateChanged(auth, user => {
             if (user) {

@@ -4,14 +4,15 @@ const Doctor = ({ doctor }) => {
     const { name, picture, phoneNumber, emailId, designation } = doctor;
     return (
         <div className="col-lg-3 col-12 my-3">
-            <div class="card h-100">
-                <img src={picture} class="card-img-top" alt="..." />
-                <div class="card-body">
-                    <h5 class="card-title">{name}</h5>
-                    <div class="card-text">
-                        <h6>{designation}</h6>
+            <div className="card h-100">
+                <img src={picture} className="card-img-top" alt="..." />
+                <div className="card-body">
+                    <h5 className="card-title">{name}</h5>
+                    <div className="card-text">
+                        <h6 className="my-3">{designation}</h6>
+                        <p className="my-0">{emailId}</p>
+                        <p className="mt-2 mb-0">{phoneNumber}</p>
                     </div>
-                    <button className="btn btn-primary">See Info</button>
                 </div>
             </div>
         </div>
