@@ -1,6 +1,0 @@
-<small>{user?.displayName}</small>
-                        {user.displayName ?
-                            <button onClick={logOut} className="btn btn-outline-success ms-2">Sign Out</button> :
-                            <NavLink to="/sign-in"><button className="btn btn-success me-2" type="submit" >Sign In</button></NavLink>
-                        }
-

@@ -1,7 +1,7 @@
 # Creating a Online healthcare website
 
 This is live site link of (Netlify):  [Fetoscope](https://mystifying-babbage-e43a43.netlify.app/).
-This is live site link of (Firebase):  [Fetoscope](https://educative.netlify.app/).
+This is live site link of (Firebase):  [Fetoscope](https://fetoscope-health-care.web.app/).
 
 ## Important Features of website
 <ul>
