@@ -39,13 +39,13 @@ const Header = () => {
                         <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
                             <li className="nav-item">
                                 {
-                                    user.displayName && <div className="user-box mx-lg-0 mx-auto py-1 px-2 mt-1 border rounded-pill d-flex align-items-center"><img src={user.photoURL} className="rounded-pill user" alt="" /> <p className="ms-2 my-2 fw-bold">{user.displayName}</p></div>
+                                    ((user.displayName)||(user.photoURL)) && <div className="user-box mx-lg-0 mx-auto py-1 px-2 mt-1 d-flex align-items-center"><img src={user.photoURL} className="rounded-pill user" alt="" /> <p className="ms-2 my-2 fw-bold">{user.displayName}</p></div>
                                 }
                             </li>
 
                             <li className="nav-item">
                                 <NavLink className="nav-link active" aria-current="page" to="/login">
-                                    {user.displayName ?
+                                    {(user.displayName)||(user.photoURL) ?
                                         <button onClick={logOut} className="btn btn-primary ms-2">Sign Out</button> :
                                         <NavLink to="/login"><button className="btn btn-outline-primary me-1" type="submit" >Log In</button></NavLink>
                                     }

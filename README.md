@@ -1,6 +1,6 @@
 # Creating a Online Education platform
 
-This is live site link of (Netlify):  [Fetoscope](https://educative.netlify.app/).
+This is live site link of (Netlify):  [Fetoscope](https://mystifying-babbage-e43a43.netlify.app/).
 This is live site link of (Firebase):  [Fetoscope](https://educative.netlify.app/).
 
 ## Important Features of website
