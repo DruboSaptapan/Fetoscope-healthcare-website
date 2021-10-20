@@ -1,0 +1,82 @@
+[
+    {
+        "id": "A1", 
+        "name": "Daisy Hammond", 
+        "picture": "https://i.postimg.cc/FF3DtvGK/doctor-1.jpg", 
+        "phoneNumber": "+1 (914) 531-3629",
+        "emailId": "daisy.hammond@gmail.com",
+        "designation": "Dentist"
+    },
+    {
+        "id": "A1",
+        "name": "Sheryl Molina",
+        "picture": "https://i.postimg.cc/q7Nx1Hz4/doctor-2.jpg",
+        "phoneNumber": "+1 (943) 435-3387",
+        "emailId": "sharyl.molina@gmail.com",
+        "designation": "Eye Specialist"
+    },
+    {
+        "id": "k5",
+        "name": "Kinney Blair",
+        "picture": "https://i.postimg.cc/JhScgYkJ/doctor-3.jpg",
+        "phoneNumber": "+1 (942) 408-2439",
+        "emailId": "kinney.blair@gmail.com",
+        "designation": "Orthopedics"
+    },
+    {
+        "id": "l9",
+        "name": "Mariana Christensen",
+        "picture": "https://i.postimg.cc/prHQV9kL/doctor-4.jpg",
+        "phoneNumber": "+1 (958) 558-2472",
+        "emailId": "mariana.christensen@gmail.com",
+        "designation": "Physiology"
+    },
+    {
+        "id": "z8", 
+        "name": "Nielsen Hyde",
+        "picture": "https://i.postimg.cc/B6DcG5Tz/doctor-5.jpg",
+        "phoneNumber": "+1 (943) 588-3887",
+        "emailId": "nielsen.hyde@gmail.com",
+        "designation": "Cardiologist"
+    },
+    {
+        "id": "a6", 
+        "name": "Frazier Gordon",
+        "picture": "https://i.postimg.cc/T2Vq79YL/doctor-6.jpg",
+        "phoneNumber": "+1 (943) 345-1894",
+        "emailId": "frazier.gordon@gmail.com",
+        "designation": "Cardiologist"
+    },
+    {
+        "id": "f5", 
+        "name": "Blair Garrison",
+        "picture": "https://i.postimg.cc/Ghng9t9Y/doctor-7.jpg",
+        "phoneNumber": "+1 (943) 465-3789",
+        "emailId": "blair.garrison@gmail.com",
+        "designation": "Physiology"
+    },
+    {
+        "id": "t5", 
+        "name": "Pearlie Conley",
+        "picture": "https://i.postimg.cc/T1JVKRHq/doctor-8.jpg",
+        "phoneNumber": "+1 (943) 465-3789",
+        "emailId": "parley.conley@gmail.com",
+        "designation": "Cardiologist"
+    },
+    {
+        "id": "g2", 
+        "name": "Paul Sosa", 
+        "picture": "https://i.postimg.cc/W1bnJkVD/doctor-9.jpg", 
+        "phoneNumber": "+1 (943) 465-3789", 
+        "emailId": "sosa.sosa@gmail.com",
+        "designation": "Orthopedics"
+    },
+    {
+        "id": "h1", 
+        "name": "Maura Stephens", 
+        "picture": "https://i.postimg.cc/L6Sv2W03/doctor-10.jpg", 
+        "phoneNumber": "+1 (943) 465-3789", 
+        "emailId": "maura.stephens@gmail.com",
+        "designation": "Eye Specialist"
+    }
+]

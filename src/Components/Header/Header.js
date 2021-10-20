@@ -7,6 +7,7 @@ import './Header.css'
 
 const Header = () => {
     const { user, logOut } = useAuth();
+    console.log(user.photoURL)
     return (
         <div>
             <nav className="navbar navbar-expand-lg navbar-light bg-light">
@@ -27,6 +28,9 @@ const Header = () => {
                                 <NavLink className="nav-link" to="/service">Services</NavLink>
                             </li>
                             <li className="nav-item">
+                                <NavLink className="nav-link" to="/doctors">Our Doctors</NavLink>
+                            </li>
+                            <li className="nav-item">
                                 <NavLink className="nav-link" to="/membership">Membership</NavLink>
                             </li>
                             <li className="nav-item">
@@ -39,7 +43,7 @@ const Header = () => {
                         <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
                             <li className="nav-item">
                                 {
-                                    ((user?.displayName) || (user?.photoURL)) &&
+                                    ((user.displayName) || (user.photoURL)) &&
                                     <div className="user-box rounded-pill mx-lg-0 mx-auto py-1 px-2 mt-1 d-flex align-items-center">
                                         <img src={user.photoURL} className="rounded-pill user" alt="" />
                                         <p className="ms-2 my-2 fw-bold">{user.displayName}</p>
@@ -49,9 +53,9 @@ const Header = () => {
 
                             <li className="nav-item">
                                 <NavLink className="nav-link active" aria-current="page" to="/login">
-                                    {(user?.displayName) || (user?.photoURL) ?
-                                        <button onClick={logOut} className="btn btn-primary ms-2">Log Out</button>:
-                                        <NavLink to="/login"><button className="btn btn-outline-primary me-1" type="submit">Log In</button></NavLink>
+                                    {(user.displayName) || (user.photoURL) ?
+                                        <button onClick={logOut} className="btn btn-outline-primary ms-2">Log out</button> :
+                                        <NavLink to="/login"><button className="btn btn-primary me-1" type="submit" >Log in</button></NavLink>
                                     }
                                 </NavLink>
                             </li>

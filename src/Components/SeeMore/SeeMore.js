@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams } from 'react-router';
 
 import './SeeMore.css'
 
 const SeeMore = () => {
-    const { serviceId } = useParams();
+    const { serviceName } = useParams();
     const [serviceInfo, setServiceInfo] = useState([])
     const [singleServiceInfo, setSingleServiceInfo] = useState({})
 
@@ -15,7 +15,7 @@ const SeeMore = () => {
     }, [])
 
     useEffect(() => {
-        const foundService = serviceInfo.find(service => service.id === serviceId)
+        const foundService = serviceInfo.find(service => service.name === serviceName)
         setSingleServiceInfo(foundService)
     }, [serviceInfo])
 

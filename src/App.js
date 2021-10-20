@@ -14,6 +14,7 @@ import Register from './Components/Register/Register'
 import SeeMore from './Components/SeeMore/SeeMore';
 import Services from './Components/Services/Services';
 import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
+import Doctors from './Components/Doctors/Doctors';
 
 function App() {
   return (
@@ -22,43 +23,47 @@ function App() {
         <Router>
           <Header></Header>
           <Switch>
-            <Route exact path="/">
+            <Route exact exact path="/">
               <Home></Home>
             </Route>
 
-            <Route path="/home">
+            <Route exact path="/home">
               <Home></Home>
             </Route>
 
-            <Route path="/service">
+            <Route exact path="/service">
               <Services></Services>
             </Route>
 
-            <PrivateRoute path="/seemore/:serviceId">
+            <PrivateRoute exact path="/seemore/:serviceId">
               <SeeMore></SeeMore>
             </PrivateRoute>
 
-            <Route path="/membership">
+            <Route exact path="/membership">
               <MemberShip></MemberShip>
             </Route>
 
-            <Route path="/aboutus">
+            <Route exact path="/doctors">
+              <Doctors></Doctors>
+            </Route>
+
+            <Route exact path="/aboutus">
               <AboutUs></AboutUs>
             </Route>
 
-            <Route path="/contactus">
+            <Route exact path="/contactus">
               <Contact></Contact>
             </Route>
 
-            <Route path="/login">
+            <Route exact path="/login">
               <Login></Login>
             </Route>
 
-            <Route path="/register">
+            <Route exact path="/register">
               <Register></Register>
             </Route>
 
-            <Route path="*">
+            <Route exact path="*">
               <NotFound></NotFound>
             </Route>
           </Switch>

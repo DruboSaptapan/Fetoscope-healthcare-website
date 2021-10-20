@@ -1,7 +1,7 @@
 .user-box{
     width: fit-content;
-    background-color: rgba(199, 230, 250, 0.329); 
-    box-shadow:  inset 0px 0px 31px 8px rgba(0,0,0,0.37);
+    /* background-color: rgba(244, 253, 255, 0.856);  */
+    /* box-shadow:  inset 0px 0px 31px 8px rgba(0,0,0,0.37); */
 }
 .user{
     width: 35px;

@@ -29,7 +29,6 @@ const useFirebase = () => {
         setIsLoading(true);
         signInWithPopup(auth, githubProvider)
             .then(result => {
-                console.log(result.user);
                 setUser(result.user);
             })
             .finally(() => setIsLoading(false));
@@ -38,9 +37,11 @@ const useFirebase = () => {
     const handleEmailChange = e => {
         setEmail(e.target.value);
     }
+
     const handlePasswordChange = e => {
         setPassword(e.target.value)
     }
+    
     const handleRegistration = e => {
         e.preventDefault();
         if (password.length < 6) {
@@ -48,6 +49,7 @@ const useFirebase = () => {
             return;
         }
         if (!/(?=.*[A-Z].*[A-Z])/.test(password)) {
+        // if ((/^[a-zA-Z0-9!@#$%^&*]{6,16}$/).test(passwordInputValue) {
             setError('Password Must contain 2 upper case');
             return;
         }
