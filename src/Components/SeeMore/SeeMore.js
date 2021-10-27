@@ -5,29 +5,27 @@ import './SeeMore.css'
 
 const SeeMore = () => {
     const { serviceId } = useParams();
-    console.log(serviceId)
-    const [serviceInfo, setServiceInfo] = useState([])
-    const [singleServiceInfo, setSingleServiceInfo] = useState({})
+    const [service, setService] = useState([])
+    console.log(service)
 
     useEffect(() => {
-        fetch(`https://raw.githubusercontent.com/DruboSaptapan/service/main/service.json`)
+        fetch('https://raw.githubusercontent.com/DruboSaptapan/service/main/service.json')
             .then(res => res.json())
-            .then(data => setServiceInfo(data))
+            .then(data => setService(data))
     }, [])
 
-    useEffect(() => {
-        const foundService = serviceInfo.find(service => service.name === serviceId)
-        setSingleServiceInfo(foundService)
-    }, [serviceId, serviceInfo])
+    const serviceInfo = service.find(service => service.id === serviceId);
+    console.log(serviceInfo)
 
     return (
-        <div>
+        <div className="container-lg">
             <div className="row mx-3 my-5 no-gutters">
-                <div className="col-md-6 d-none d-md-block">
-                    <img src={singleServiceInfo?.image} className="img-thumbnail w-50 me-3 mb-2" alt="..." />
+                <h2 className="mb-4">{serviceInfo?.name}</h2>
+                <div className="col-md-6">
+                    <img src={serviceInfo?.image} className="img-thumbnail me-3 mb-2" alt="..." />
                 </div>
-                <div className="col-md-6 bg-white p-5">
-                    <p className="text-start">{singleServiceInfo?.description}</p>
+                <div className="col-md-6 bg-white p-lg-0">
+                    <p className="text-start">{serviceInfo?.description}</p>
                 </div>
             </div>
         </div>

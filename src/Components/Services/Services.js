@@ -8,7 +8,7 @@ const Services = () => {
         fetch('https://raw.githubusercontent.com/DruboSaptapan/service/main/service.json')
             .then(res => res.json())
             .then(data => setServices(data))
-    })
+    }, [])
     return (
         <div className="container my-5">
             <h1 className="mb-4">Services</h1>

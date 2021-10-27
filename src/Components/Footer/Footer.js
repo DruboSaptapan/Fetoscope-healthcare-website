@@ -16,7 +16,7 @@ const Footer = () => {
                             Fetoscope
                         </Link>
                     </div>
-                    <div className="col-4 col-lg-3">
+                    <div className="col-6 col-lg-3">
                         <ul className="service-list">
                             <li className="text-start">Services</li>
                             <li className="text-start">Cardiology(Adult)</li>
@@ -25,7 +25,7 @@ const Footer = () => {
                             <li className="text-start">Therapies</li>
                         </ul>
                     </div>
-                    <div className="col-4 col-lg-3">
+                    <div className="col-6 col-lg-3">
                         <ul className="important-list">
                             <li className="text-start">Important Links</li>
                             <li className="text-start">Home</li>
@@ -34,7 +34,7 @@ const Footer = () => {
                             <li className="text-start">Contact Us</li>
                         </ul>
                     </div>
-                    <div className="col-4 col-lg-3">
+                    <div className="col-6 col-lg-3">
                         <ul className="important-list">
                             <li className="text-start">Support</li>
                             <li className="text-start">Terms of services</li>

@@ -3,7 +3,7 @@ import React from 'react';
 const Doctor = ({ doctor }) => {
     const { name, picture, phoneNumber, emailId, designation } = doctor;
     return (
-        <div className="col-lg-3 col-12 my-3">
+        <div className="col-lg-3 col-12 my-3 pe-0">
             <div className="card h-100">
                 <img src={picture} className="card-img-top" alt="..." />
                 <div className="card-body">
