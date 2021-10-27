@@ -15,7 +15,7 @@ const Doctor = ({doctor}) => {
                         <p className="m-2 mb-0">{phoneNumber}</p>
                     </div>
                     <Link to={`/doctorinfo/${id}`}>
-                        <button className="btn service-btn border" doctor={doctor}>Contact</button>
+                        <button className="btn theme-btn border" doctor={doctor}>Contact</button>
                     </Link>
                 </div>
             </div>

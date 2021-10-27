@@ -16,7 +16,7 @@ const Home = () => {
                             <h1 className="text-start fw-normal">Medical Services <span className="fw-bold">that you can trust</span></h1>
                             <p className="text-start">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Error vel quaerat inventore, soluta voluptatum dolore perferendis nostrum, nesciunt expedita ratione earum, aperiam at minus doloremque eveniet rerum aut culpa molestiae!</p>
                             <NavLink to="/register">
-                                <button className="btn banner-btn">Read more</button>
+                                <button className="btn theme-btn">Read more</button>
                             </NavLink>
                         </div>
                         <div className="col-lg-5"></div>
