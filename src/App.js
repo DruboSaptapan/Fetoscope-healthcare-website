@@ -1,7 +1,6 @@
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import './App.css';
 
-import AboutUs from './Components/AboutUs/AboutUs';
 import AuthProvider from './Context/AuthProvider';
 import Contact from './Components/Contact/Contact'
 import Footer from './Components/Footer/Footer';
@@ -52,10 +51,6 @@ function App() {
             <PrivateRoute exact path="/doctorinfo/:doctorId">
               <DoctorInfo></DoctorInfo>
             </PrivateRoute>
-
-            <Route exact path="/aboutus">
-              <AboutUs></AboutUs>
-            </Route>
 
             <Route exact path="/contactus">
               <Contact></Contact>

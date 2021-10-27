@@ -33,9 +33,6 @@ const Header = () => {
                                 <NavLink className="nav-link" activeStyle={{color: 'darkBlue', fontWeight: 'bold'}} to="/membership">Membership</NavLink>
                             </li>
                             <li className="nav-item">
-                                <NavLink className="nav-link" activeStyle={{color: 'darkBlue', fontWeight: 'bold'}} to="/aboutus">About Us</NavLink>
-                            </li>
-                            <li className="nav-item">
                                 <NavLink className="nav-link" activeStyle={{color: 'darkBlue', fontWeight: 'bold'}} to="/contactus">Contact Us</NavLink>
                             </li>
                         </ul>

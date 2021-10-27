@@ -31,7 +31,6 @@ const Footer = () => {
                                 <li className="text-start">Important Links</li>
                                 <li className="text-start">Home</li>
                                 <li className="text-start">Services</li>
-                                <li className="text-start">About Us</li>
                                 <li className="text-start">Contact Us</li>
                             </ul>
                         </div>
