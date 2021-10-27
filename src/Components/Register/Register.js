@@ -31,8 +31,7 @@ const Register = () => {
                                 <small className="text-danger">{error}</small>
                             </div>
                             <div className="pb-2">
-                                {/* <button type="submit" onClick={handleSignIn} className="btn btn-outline-primary border w-100 fw-normal mt-2">Register</button> */}
-                                <input type="submit" value="SIGN UP" className="btn btn-outline-primary py-2 border w-100 fw-normal mt-2" />
+                                <input type="submit" value="Registration" className="btn btn-outline-primary py-2 border w-100 fw-normal mt-2" />
                                 <div className="sideline">OR</div>
                                 <div className="pb-2">
                                     <button onClick={signInUsingGoogle} className="btn border w-100 fw-normal mt-2"><FcGoogle /> Register with Google</button>

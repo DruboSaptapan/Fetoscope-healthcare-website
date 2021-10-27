@@ -19,24 +19,24 @@ const useFirebase = () => {
     // log in with google
     const signInUsingGoogle = () => {
         setIsLoading(true);
-        signInWithPopup(auth, googleProvider)
-            .then(result => {
-                setUser(result.user);
-            })
-            .finally(() => setIsLoading(false));
+        return signInWithPopup(auth, googleProvider);
+            // .then(result => {
+            //     setUser(result.user);
+            // })
+            // .finally(() => setIsLoading(false));
     };
 
     // log in with github
     const signInUsingGithub = () => {
         setIsLoading(true);
-        signInWithPopup(auth, githubProvider)
-            .then(result => {
-                setUser(result.user);
-            })
-            .finally(() => setIsLoading(false));
+        return signInWithPopup(auth, githubProvider)
+            // .then(result => {
+            //     setUser(result.user);
+            // })
+            // .finally(() => setIsLoading(false));
     }
 
-    // registration processing with email and password
+    // registration with email and password
     const handleEmailChange = e => {
         setEmail(e.target.value);
     }
@@ -55,7 +55,6 @@ const useFirebase = () => {
         }
         else {
             // e.value = '';
-            console.log(e.value)
             alert("User has been Created. Please Sign in!");
         }
 
@@ -72,14 +71,13 @@ const useFirebase = () => {
 
     const handleSignIn = (e) => {
         e.preventDefault();
-
-
+        
         // if ((password.length <= 6) && (/(?=.*[A-Z].*[A-Z])/.test(password))) {
         //     alert("Sign In Successfully.");
         // }
 
         // log in with email and password
-        signInWithEmailAndPassword(auth, email, password)
+        return signInWithEmailAndPassword(auth, email, password)
             .then(result => {
                 setUser(result.user);
                 setError('');
@@ -91,6 +89,7 @@ const useFirebase = () => {
 
     const logOut = () => {
         setIsLoading(true);
+        window.location.href = '/';
         signOut(auth)
             .then(() => { })
             .finally(() => setIsLoading(false));

@@ -1,12 +1,12 @@
-.service-btn{
+.service-btn, .doctor-btn{
     background-color: cornflowerblue;
 }
 
-.service-btn{
+.service-btn, .doctor-btn{
     font-weight: 700;
     background-color: lightsteelblue;
 }
-.service-btn:hover{
+.service-btn:hover, .doctor-btn:hover{
     color: #fff;
     background-color: rgb(72, 126, 196);
 }

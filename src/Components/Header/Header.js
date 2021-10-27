@@ -42,16 +42,16 @@ const Header = () => {
                         <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
                             <li className="nav-item">
                                 {
-                                    ((user.displayName) || (user.photoURL)) &&
+                                    ((user?.displayName) || (user?.photoURL) || (user?.email)) &&
                                     <div className="user-box rounded-pill mx-lg-0 mx-auto py-1 px-2 d-flex align-items-center">
-                                        <img src={user.photoURL} className="rounded-pill user" alt="" />
-                                        <p className="ms-2 mb-2 fw-bold">{user.displayName}</p>
+                                        <img src={user?.photoURL} className="rounded-pill user" alt="" />
+                                        <p className="ms-2 mb-2 fw-bold">{(user?.displayName) || (user?.email)}</p>
                                     </div>
                                 }
                             </li>
 
                             <li className="nav-item">
-                                {(user.displayName) || (user.photoURL) ?
+                                {(user?.displayName) || (user?.photoURL) || (user?.email) ?
                                     <button onClick={logOut} className="btn btn-outline-primary ms-2">LOG OUT</button> :
                                     <NavLink to="/login"><button className="btn btn-primary me-1" type="submit" >LOG IN</button></NavLink>
                                 }

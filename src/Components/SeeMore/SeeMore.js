@@ -6,7 +6,6 @@ import './SeeMore.css'
 const SeeMore = () => {
     const { serviceId } = useParams();
     const [service, setService] = useState([])
-    console.log(service)
 
     useEffect(() => {
         fetch('https://raw.githubusercontent.com/DruboSaptapan/service/main/service.json')
@@ -15,17 +14,16 @@ const SeeMore = () => {
     }, [])
 
     const serviceInfo = service.find(service => service.id === serviceId);
-    console.log(serviceInfo)
 
     return (
         <div className="container-lg">
-            <div className="row mx-3 my-5 no-gutters">
+            <div className="row mx-3 my-5 no-gutters align-items-center">
                 <h2 className="mb-4">{serviceInfo?.name}</h2>
                 <div className="col-md-6">
                     <img src={serviceInfo?.image} className="img-thumbnail me-3 mb-2" alt="..." />
                 </div>
                 <div className="col-md-6 bg-white p-lg-0">
-                    <p className="text-start">{serviceInfo?.description}</p>
+                    <p className="text-start">{serviceInfo?.description.slice(0,1300)}</p>
                 </div>
             </div>
         </div>

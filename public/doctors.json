@@ -32,14 +32,6 @@
         "designation": "Physiology"
     },
     {
-        "id": "z8", 
-        "name": "Nielsen Hyde",
-        "picture": "https://i.postimg.cc/B6DcG5Tz/doctor-5.jpg",
-        "phoneNumber": "+1 (943) 588-3887",
-        "emailId": "nielsen.hyde@gmail.com",
-        "designation": "Cardiologist"
-    },
-    {
         "id": "a6", 
         "name": "Frazier Gordon",
         "picture": "https://i.postimg.cc/T2Vq79YL/doctor-6.jpg",
@@ -62,14 +54,6 @@
         "phoneNumber": "+1 (943) 465-3789",
         "emailId": "parley.conley@gmail.com",
         "designation": "Cardiologist"
-    },
-    {
-        "id": "g2", 
-        "name": "Paul Sosa", 
-        "picture": "https://i.postimg.cc/W1bnJkVD/doctor-9.jpg", 
-        "phoneNumber": "+1 (943) 465-3789", 
-        "emailId": "sosa.sosa@gmail.com",
-        "designation": "Orthopedics"
     },
     {
         "id": "h1", 
