@@ -43,7 +43,7 @@ const Footer = () => {
                             </ul>
                         </div>
                     </div>
-                    <p className="mt-5 mb-0 fw-bold">Copyright © 2021 | This website is made by Saptapan Barua</p>
+                    <p className="mt-5 mb-0 fw-bold pb-4">Copyright © 2021 | This website is made by Saptapan Barua</p>
                 </div>
             </div>
         </div>

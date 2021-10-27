@@ -14,7 +14,6 @@ const PrivateRoute = ({ children, ...rest }) => {
                     <span className="visually-hidden">Loading...</span>
                 </div>
             </div>
-
         )
     }
     return (

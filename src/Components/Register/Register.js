@@ -4,10 +4,30 @@ import { VscGithubAlt } from "react-icons/vsc";
 import { Link } from 'react-router-dom';
 import useAuth from '../../Hooks/useAuth';
 import img from './images/side-img.jpg'
+import { useHistory, useLocation } from 'react-router';
 
 
 const Register = () => {
     const { signInUsingGoogle, signInUsingGithub, handleEmailChange, handlePasswordChange, handleRegistration, error } = useAuth();
+    const location = useLocation();
+    const history = useHistory()
+    const redirectURL = location.state?.from || '/'
+
+    /* redirected google log in */
+    const handleGoogleLogIn = () => {
+        signInUsingGoogle()
+            .then(result => {
+                history.push(redirectURL)
+            })
+    }
+    
+    /* redirected github log in */
+    const handleGithubLogIn = () => {
+        signInUsingGithub()
+        .then(result => {
+            history.push(redirectURL)
+        })
+    }
     return (
         <div className="container">
             <div className="row m-lg-5 my-5 mx-0 no-gutters shadow-lg align-items-center">
@@ -34,11 +54,11 @@ const Register = () => {
                                 <input type="submit" value="Registration" className="btn btn-outline-primary py-2 border w-100 fw-normal mt-2" />
                                 <div className="sideline">OR</div>
                                 <div className="pb-2">
-                                    <button onClick={signInUsingGoogle} className="btn border w-100 fw-normal mt-2"><FcGoogle /> Register with Google</button>
+                                    <button onClick={handleGoogleLogIn} className="btn border w-100 fw-normal mt-2"><FcGoogle /> Register with Google</button>
                                 </div>
                                 <div className="sideline">OR</div>
                                 <div>
-                                    <button onClick={signInUsingGithub} className="btn btn-outline-dark w-100 fw-normal mt-2"> <VscGithubAlt /> Register With Github</button>
+                                    <button onClick={handleGithubLogIn} className="btn btn-outline-dark w-100 fw-normal mt-2"> <VscGithubAlt /> Register With Github</button>
                                 </div>
                                 <div className="pt-4 text-center">
                                     Already have an account. <Link to="/login" style={{ textDecoration: 'none' }}>Log in</Link>

@@ -1,5 +1,9 @@
 .footer{
-    background-color: #bed3f066;
+    color: #fff;
+    background-color: #3d5470;
+}
+.footer a{
+    color: #fff;
 }
 .service-list li, .important-list li{
     list-style-type: none;

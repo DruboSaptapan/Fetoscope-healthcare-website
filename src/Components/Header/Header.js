@@ -21,22 +21,22 @@ const Header = () => {
                     <div className="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul className="navbar-nav mx-auto mb-2 mb-lg-0">
                             <li className="nav-item">
-                                <NavLink className="nav-link active" aria-current="page" to="/home">Home</NavLink>
+                                <NavLink className="nav-link" activeStyle={{color: 'darkBlue', fontWeight: 'bold'}} exact aria-current="page" to="/">Home</NavLink>
                             </li>
                             <li className="nav-item">
-                                <NavLink className="nav-link" to="/service">Services</NavLink>
+                                <NavLink className="nav-link" activeStyle={{color: 'darkBlue', fontWeight: 'bold'}} to="/service">Services</NavLink>
                             </li>
                             <li className="nav-item">
-                                <NavLink className="nav-link" to="/doctors">Our Doctors</NavLink>
+                                <NavLink className="nav-link" activeStyle={{color: 'darkBlue', fontWeight: 'bold'}} to="/doctors">Our Doctors</NavLink>
                             </li>
                             <li className="nav-item">
-                                <NavLink className="nav-link" to="/membership">Membership</NavLink>
+                                <NavLink className="nav-link" activeStyle={{color: 'darkBlue', fontWeight: 'bold'}} to="/membership">Membership</NavLink>
                             </li>
                             <li className="nav-item">
-                                <NavLink className="nav-link" to="/aboutus">About Us</NavLink>
+                                <NavLink className="nav-link" activeStyle={{color: 'darkBlue', fontWeight: 'bold'}} to="/aboutus">About Us</NavLink>
                             </li>
                             <li className="nav-item">
-                                <NavLink className="nav-link" to="/contactus">Contact Us</NavLink>
+                                <NavLink className="nav-link" activeStyle={{color: 'darkBlue', fontWeight: 'bold'}} to="/contactus">Contact Us</NavLink>
                             </li>
                         </ul>
                         <ul className="navbar-nav ms-auto mb-2 mb-lg-0">

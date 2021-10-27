@@ -15,20 +15,16 @@ const Login = () => {
     const handleGoogleLogIn = () => {
         signInUsingGoogle()
             .then(result => {
-                // setUser(result.user);
                 history.push(redirectURL)
             })
-            // .finally(() => setIsLoading(false));
     }
 
     /* redirected github log in */
     const handleGithubLogIn = () => {
         signInUsingGithub()
         .then(result => {
-            // setUser(result.user);
             history.push(redirectURL)
         })
-        // .finally(() => setIsLoading(false));
     }
     return (
         <div className="container">

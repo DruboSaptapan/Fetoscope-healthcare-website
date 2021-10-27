@@ -75,8 +75,8 @@ const useFirebase = () => {
         // if ((password.length <= 6) && (/(?=.*[A-Z].*[A-Z])/.test(password))) {
         //     alert("Sign In Successfully.");
         // }
-
         // log in with email and password
+
         return signInWithEmailAndPassword(auth, email, password)
             .then(result => {
                 setUser(result.user);

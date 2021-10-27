@@ -15,6 +15,7 @@ import SeeMore from './Components/SeeMore/SeeMore';
 import Services from './Components/Services/Services';
 import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
 import Doctors from './Components/Doctors/Doctors';
+import DoctorInfo from './Components/DoctorInfo/DoctorInfo';
 
 function App() {
   return (
@@ -39,13 +40,18 @@ function App() {
               <SeeMore></SeeMore>
             </PrivateRoute>
 
-            <Route exact path="/membership">
-              <MemberShip></MemberShip>
-            </Route>
 
-            <Route exact path="/doctors">
+            <PrivateRoute exact path="/membership">
+              <MemberShip></MemberShip>
+            </PrivateRoute>
+
+            <PrivateRoute exact path="/doctors">
               <Doctors></Doctors>
-            </Route>
+            </PrivateRoute>
+
+            <PrivateRoute exact path="/doctorinfo/:doctorId">
+              <DoctorInfo></DoctorInfo>
+            </PrivateRoute>
 
             <Route exact path="/aboutus">
               <AboutUs></AboutUs>
