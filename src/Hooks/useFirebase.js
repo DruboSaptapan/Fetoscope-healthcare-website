@@ -15,35 +15,33 @@ const useFirebase = () => {
     const googleProvider = new GoogleAuthProvider();
     const githubProvider = new GithubAuthProvider();
 
+
+    // log in with google
     const signInUsingGoogle = () => {
         setIsLoading(true);
         signInWithPopup(auth, googleProvider)
             .then(result => {
                 setUser(result.user);
             })
-            .catch(error => {
-                setError(error.message)
-            })
             .finally(() => setIsLoading(false));
     };
 
+    // log in with github
     const signInUsingGithub = () => {
         setIsLoading(true);
         signInWithPopup(auth, githubProvider)
             .then(result => {
                 setUser(result.user);
             })
-            .catch(error => {
-                setError(error.message)
-            })
             .finally(() => setIsLoading(false));
     }
 
+    // registration processing with email and password
     const handleEmailChange = e => {
         setEmail(e.target.value);
     }
     const handlePasswordChange = e => {
-        setPassword(e.target.value)
+        setPassword(e.target.value);
     }
     const handleRegistration = e => {
         e.preventDefault();
@@ -55,14 +53,13 @@ const useFirebase = () => {
             setError('Password Must contain 2 upper case');
             return;
         }
-        else if (error.message == '(auth/email-already-in-use)') {
-            alert("Oops! email already in use.");
-        }
-
         else {
+            // e.value = '';
+            console.log(e.value)
             alert("User has been Created. Please Sign in!");
         }
 
+        // create account with email and password
         createUserWithEmailAndPassword(auth, email, password)
             .then(result => {
                 setUser(result.user);
@@ -76,10 +73,12 @@ const useFirebase = () => {
     const handleSignIn = (e) => {
         e.preventDefault();
 
+
         // if ((password.length <= 6) && (/(?=.*[A-Z].*[A-Z])/.test(password))) {
         //     alert("Sign In Successfully.");
         // }
 
+        // log in with email and password
         signInWithEmailAndPassword(auth, email, password)
             .then(result => {
                 setUser(result.user);
@@ -97,9 +96,7 @@ const useFirebase = () => {
             .finally(() => setIsLoading(false));
     };
 
-    // observation to user state change when signIn or signOut
-    // it observes that 
-
+    // it observes that user state change when login or registration
     useEffect(() => {
         const unsubscribed = onAuthStateChanged(auth, user => {
             if (user) {

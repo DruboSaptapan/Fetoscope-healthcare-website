@@ -7,7 +7,6 @@ import './PrivateRoute.css'
 
 const PrivateRoute = ({ children, ...rest }) => {
     const { user, isLoading } = useAuth();
-    console.log(user)
     if (isLoading) {
         return (
             <div className="d-flex justify-content-center align-items-center load-spinner">
@@ -22,7 +21,7 @@ const PrivateRoute = ({ children, ...rest }) => {
         <Route
             {...rest}
             render={({ location }) => 
-            user.email? children:
+            (user.displayName || user.email || user.photoURL)? children:
             <Redirect
                 to={{
                     pathname: "/login",

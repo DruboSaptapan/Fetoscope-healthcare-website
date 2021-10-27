@@ -7,7 +7,6 @@ import './Header.css'
 
 const Header = () => {
     const { user, logOut } = useAuth();
-    console.log(user.photoURL)
     return (
         <div>
             <nav className="navbar navbar-expand-lg navbar-light bg-light">
@@ -44,20 +43,18 @@ const Header = () => {
                             <li className="nav-item">
                                 {
                                     ((user.displayName) || (user.photoURL)) &&
-                                    <div className="user-box rounded-pill mx-lg-0 mx-auto py-1 px-2 mt-1 d-flex align-items-center">
+                                    <div className="user-box rounded-pill mx-lg-0 mx-auto py-1 px-2 d-flex align-items-center">
                                         <img src={user.photoURL} className="rounded-pill user" alt="" />
-                                        <p className="ms-2 my-2 fw-bold">{user.displayName}</p>
+                                        <p className="ms-2 mb-2 fw-bold">{user.displayName}</p>
                                     </div>
                                 }
                             </li>
 
                             <li className="nav-item">
-                                <NavLink className="nav-link active" aria-current="page" to="/login">
-                                    {(user.displayName) || (user.photoURL) ?
-                                        <button onClick={logOut} className="btn btn-outline-primary ms-2">Log out</button> :
-                                        <NavLink to="/login"><button className="btn btn-primary me-1" type="submit" >Log in</button></NavLink>
-                                    }
-                                </NavLink>
+                                {(user.displayName) || (user.photoURL) ?
+                                    <button onClick={logOut} className="btn btn-outline-primary ms-2">LOG OUT</button> :
+                                    <NavLink to="/login"><button className="btn btn-primary me-1" type="submit" >LOG IN</button></NavLink>
+                                }
                             </li>
                         </ul>
                     </div>

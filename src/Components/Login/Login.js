@@ -1,14 +1,11 @@
-import React from 'react';
-
 import img from './images/doctor.jpg'
-
 import { FcGoogle } from "react-icons/fc";
 import { VscGithubAlt } from "react-icons/vsc";
 import { Link } from 'react-router-dom';
 import useAuth from '../../Hooks/useAuth';
 
 const Login = () => {
-    const { signInUsingGoogle, signInUsingGithub } = useAuth();
+    const { signInUsingGoogle, signInUsingGithub, handleEmailChange, handleSignIn, handlePasswordChange, error } = useAuth();
     return (
         <div className="container">
             <div className="row mx-3 my-5 no-gutters shadow-lg">
@@ -18,19 +15,21 @@ const Login = () => {
                 <div className="col-md-6 bg-white p-5">
                     <h4 className="pb-3 text-start">Please log in</h4>
                     <div className="form-style">
-                        <form>
+                        <form onSubmit={handleSignIn}>
                             <div className="form-floating mb-3">
-                                <input type="email" className="form-control" id="floatingInput" placeholder="name@example.com"/>
+                                <input onBlur={handleEmailChange} type="email" className="form-control" placeholder="name@example.com"/>
                                 <label htmlFor="floatingInput">Email address</label>
                             </div>
                             <div className="form-floating mb-3">
-                                <input type="password" className="form-control" id="floatingInput" placeholder="password"/>
+                                <input onBlur={handlePasswordChange} type="password" className="form-control" placeholder="password" />
                                 <label htmlFor="floatingInput">Password</label>
+                                <div>
+                                    <small className="text-danger">{error}</small>
+                                </div>
                             </div>
                         </form>
-
                         <div className="pb-2">
-                            <button className="btn border w-100 btn-primary fw-normal mt-2">Log in</button>
+                            <input type="submit" value="LOG IN" className="btn border w-100 btn-primary fw-normal mt-2" />
                         </div>
 
                         <div className="sideline">OR</div>
