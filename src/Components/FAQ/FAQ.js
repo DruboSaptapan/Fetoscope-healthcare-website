@@ -3,7 +3,7 @@ import faqIMG from './images/faq.jpg'
 
 const FAQ = () => {
     return (
-        <div>
+        <div className="container">
             <div className="my-5 faq-header">
                 <h2>Frequently Asked Questions</h2>
                 <p className="w-75 mx-auto">Any question putting on your FAQ page on the tap navigation of your website, or place it on a pull-down menu under the Contact us section.</p>

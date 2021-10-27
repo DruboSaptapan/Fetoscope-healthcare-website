@@ -55,7 +55,6 @@ const Login = () => {
                         <div className="sideline">OR</div>
 
                         <div className="pb-2">
-                            {/* <button onClick={signInUsingGoogle} className="btn border w-100 fw-normal mt-2"><FcGoogle />Log in with Google</button> */}
                             <button onClick={handleGoogleLogIn} className="btn border w-100 fw-normal mt-2"><FcGoogle />Log in with Google</button>
                         </div>
 
