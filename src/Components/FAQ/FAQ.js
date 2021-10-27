@@ -8,8 +8,8 @@ const FAQ = () => {
                 <h2>Frequently Asked Questions</h2>
                 <p className="w-75 mx-auto">Any question putting on your FAQ page on the tap navigation of your website, or place it on a pull-down menu under the Contact us section.</p>
             </div>
-            <div className="row align-items-center">
-                <div className="col-lg-6">
+            <div className="row align-items-center shadow-lg shadow-none py-3">
+                <div className="col-lg-6 mb-lg-0 mb-3">
                     <img src={faqIMG} alt="" className="img-fluid" />
                 </div>
                 <div className="col-lg-6">
